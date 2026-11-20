@@ -46,6 +46,7 @@ nav{height:78px;display:flex;align-items:center;justify-content:space-between;ga
 .preview-label{font-size:10px;color:#8eb7ff;border:1px solid rgba(78,148,255,.3);border-radius:30px;padding:5px 9px;letter-spacing:1px;text-transform:uppercase}
 .market-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .market-tile{display:flex;align-items:center;gap:11px;padding:15px 13px;border:1px solid rgba(255,255,255,.08);border-radius:11px;background:rgba(255,255,255,.035)}
+.market-link{position:relative;cursor:pointer;transition:.22s;border-color:rgba(255,255,255,.09)}.market-link:hover,.market-link:focus-visible{transform:translateY(-3px);border-color:#168bff;background:rgba(21,94,239,.13);box-shadow:0 8px 26px rgba(0,105,255,.16);outline:none}.market-arrow{margin-left:auto;color:#75a7ff;font-size:17px;opacity:.8}
 .market-symbol{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:rgba(24,126,255,.15);font-size:18px}
 .market-tile strong{display:block;font-size:13px}.market-tile small{display:block;color:var(--muted);font-size:10px}
 .market-note{margin-top:13px;color:#7f91ad;font-size:10px;text-align:right}
@@ -107,6 +108,17 @@ footer p{font-size:11px;color:var(--muted);margin-top:7px}
 .whatsapp{position:fixed;right:18px;bottom:18px;z-index:90;background:#16a34a;color:white;padding:12px 17px;border-radius:40px;font-size:13px;font-weight:800;box-shadow:0 5px 22px #0008}
 @media(max-width:850px){.menu{display:block}.navlinks{display:none;position:absolute;top:78px;left:0;right:0;padding:22px 5%;background:#091326;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.about-grid{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.hero-layout{grid-template-columns:1fr;padding:58px 0}.hero-content{padding:20px 0 10px}.hero-visual{max-width:700px;width:100%;margin:0 auto}.market-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){section{padding:65px 0}.topics,.contact-grid{grid-template-columns:1fr}.stats{gap:20px}.stats strong{font-size:21px}h1{letter-spacing:-2px}.hero-content{padding:20px 0}.hero-layout{padding:38px 0}.hero-visual{padding:11px}.visual-bottom{font-size:9px}.visual-bottom strong{font-size:12px}.market-grid{grid-template-columns:1fr 1fr;gap:8px}.market-tile{padding:10px 8px;gap:7px}.market-tile strong{font-size:11px}.market-tile small{font-size:9px}.market-symbol{width:30px;height:30px;font-size:15px}.market-shell{padding:13px}.founder-box{padding:26px 18px}}
+
+.hero-tagline{margin-top:13px;color:#9fc5ff;font-size:12px;font-weight:900;letter-spacing:3px}
+.batch-pill{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:18px;padding:10px 14px;border:1px solid rgba(65,151,255,.35);border-radius:999px;background:rgba(14,94,190,.14);color:#dceaff;font-size:11px;font-weight:800;letter-spacing:.5px}
+.batch-pill span{color:#49a5ff}
+.founder-signoff{color:#dceaff!important;font-weight:700;margin-top:22px!important}
+.founder-punchline{margin-top:24px;color:#75b7ff;font-size:clamp(20px,3vw,27px);font-weight:900;letter-spacing:-.4px}
+.founder-cta-line{margin-top:9px;color:#dceaff;font-size:10px;font-weight:900;letter-spacing:2px}
+.contact-item{position:relative;display:block;transition:.2s}.contact-item:hover{border-color:#168bff;transform:translateY(-2px)}
+.contact-icon{display:grid;place-items:center;width:34px;height:34px;margin-bottom:11px;border-radius:10px;background:rgba(24,126,255,.16);color:#82b9ff;font-size:20px}
+@media(max-width:560px){.batch-pill{font-size:10px;line-height:1.6}.hero-tagline{letter-spacing:2px}}
+
 </style>
 </head>
 <body>
@@ -138,7 +150,9 @@ footer p{font-size:11px;color:var(--muted);margin-top:7px}
   <div class="container hero-layout">
     <div class="hero-content">
       <div class="eyebrow">WELCOME TO ACHIVEST TRADING ACADEMY</div>
-      <h1>Learn The Markets.<br>Trade With <span class="blue">Knowledge.</span></h1>
+      <h1>ACCELERATE YOUR<br>MARKET KNOWLEDGE.<br><span class="blue">TRADE SMARTER.</span></h1>
+      <div class="hero-tagline">LEARN. TRADE. ACHIEVE.</div>
+      <div class="batch-pill">LIVE ONLINE BATCH <span>•</span> Live Zoom Classes | Monday – Friday</div>
       <p>Build your understanding of Crypto, Forex and Gold markets through structured trading education, practical market study and disciplined risk management.</p>
       <div class="actions">
         <a class="btn" href="#courses">Explore Courses →</a>
@@ -173,27 +187,12 @@ footer p{font-size:11px;color:var(--muted);margin-top:7px}
   <div class="container market-shell">
     <div class="market-head"><h2>Explore the Markets</h2><span class="preview-label">Market overview</span></div>
     <div class="market-grid">
-<a href="bitcoin.html" target="_blank" class="market-tile">
-  <span class="market-symbol">₿</span>
-  <div><strong>Bitcoin</strong><small>BTC / USD · Crypto</small></div>
-</a>
-
-<a href="gold.html" target="_blank" class="market-tile">
-  <span class="market-symbol">🟡</span>
-  <div><strong>Gold</strong><small>XAU / USD · Metals</small></div>
-</a>
-
-<a href="ethereum.html" target="_blank" class="market-tile">
-  <span class="market-symbol">♦</span>
-  <div><strong>Ethereum</strong><small>ETH / USD · Crypto</small></div>
-</a>
-
-<a href="forex.html" target="_blank" class="market-tile">
-  <span class="market-symbol">↗</span>
-  <div><strong>Forex</strong><small>Major currency pairs</small></div>
-</a>
+      <a class="market-tile market-link" href="bitcoin.html" aria-label="Open Bitcoin live chart"><span class="market-symbol">₿</span><div><strong>Bitcoin</strong><small>BTC / USD · Crypto</small></div><span class="market-arrow">↗</span></a>
+      <a class="market-tile market-link" href="gold.html" aria-label="Open Gold live chart"><span class="market-symbol">🟡</span><div><strong>Gold</strong><small>XAU / USD · Metals</small></div><span class="market-arrow">↗</span></a>
+      <a class="market-tile market-link" href="ethereum.html" aria-label="Open Ethereum live chart"><span class="market-symbol">◆</span><div><strong>Ethereum</strong><small>ETH / USD · Crypto</small></div><span class="market-arrow">↗</span></a>
+      <a class="market-tile market-link" href="forex.html" aria-label="Open Forex live chart"><span class="market-symbol">↗</span><div><strong>Forex</strong><small>Major currency pairs</small></div><span class="market-arrow">↗</span></a>
     </div>
-    <div class="market-note">Illustrative design only · No live prices or trading signals are displayed</div>
+    <div class="market-note">TradingView Market Charts · Data may be delayed · Educational Purpose Only</div>
   </div>
 </section>
 
@@ -201,9 +200,10 @@ footer p{font-size:11px;color:var(--muted);margin-top:7px}
   <div class="container about-grid">
     <div class="about-copy">
       <div class="eyebrow">ABOUT ACHIVEST</div>
-      <h2>Education First.<br><span class="blue">Discipline Always.</span></h2>
-      <p>ACHIVEST Trading Academy focuses on structured education in financial markets, helping learners understand market concepts, technical analysis and responsible risk management.</p>
-      <p>Our approach emphasizes learning, practical chart study and continuous improvement. We believe that knowledge and discipline are important foundations of a trader's educational journey.</p>
+      <h2>Learn. Understand.<br><span class="blue">Grow with Confidence.</span></h2>
+      <p>At ACHIVEST Trading Academy, we help you understand Crypto, Forex and Gold markets in a simple and practical way.</p>
+      <p>From market basics to technical analysis, chart reading and risk management, we focus on helping you build knowledge step by step.</p>
+      <p>Our goal is simple — help you learn the markets, develop discipline and make more informed trading decisions.</p>
     </div>
     <div class="panel">
       <h3>Our Learning Approach</h3>
@@ -220,9 +220,9 @@ footer p{font-size:11px;color:var(--muted);margin-top:7px}
 <section class="dark" id="courses">
   <div class="container">
     <div class="heading">
-      <small>OUR LEARNING PROGRAMS</small>
+      <small>LIVE ONLINE TRADING PROGRAM</small>
       <h2>Explore Our Courses</h2>
-      <p>Explore the concepts and tools used to study different financial markets.</p>
+      <p>Live Zoom Classes | Monday – Friday</p>
     </div>
     <div class="grid3">
       <article class="card">
@@ -251,8 +251,8 @@ footer p{font-size:11px;color:var(--muted);margin-top:7px}
   <div class="container">
     <div class="heading">
       <small>WHAT YOU WILL LEARN</small>
-      <h2>Course Curriculum</h2>
-      <p>A structured curriculum covering market fundamentals, technical tools and risk management.</p>
+      <h2>YOUR TRADING JOURNEY STARTS HERE.</h2>
+      <p>Explore the skills, strategies and knowledge covered in our learning program.</p>
     </div>
     <div class="topics">
       <div class="topic"><b>01</b> Introduction to Crypto</div>
@@ -303,9 +303,14 @@ footer p{font-size:11px;color:var(--muted);margin-top:7px}
       <div class="eyebrow">MEET THE FOUNDER</div>
       <h3>Saurabh Kharbade</h3>
       <div class="experience">7+ Years of Market Experience</div>
-      <p>Founder of ACHIVEST Trading Academy. With 7+ years of market experience, Saurabh Kharbade founded ACHIVEST with a vision to make trading education structured, practical and accessible.</p>
-      <p>The academy's educational approach emphasizes technical analysis, market understanding and disciplined risk management.</p>
-      <a class="btn" href="#contact" style="margin-top:12px">Connect With Us</a>
+      <p>Hello! I'm Saurabh, founder of ACHIVEST Trading Academy.</p>
+      <p>My goal is to make learning about Crypto, Forex and Gold simple and easy for everyone.</p>
+      <p>I believe that understanding the market, learning the right concepts and managing risk are important parts of trading.</p>
+      <p>At ACHIVEST, we want to help every learner build knowledge, confidence and discipline step by step.</p>
+      <p class="founder-signoff">Let's Learn and Grow Together.</p>
+      <div class="founder-punchline">“Every Expert Was Once a Beginner.”</div>
+      <div class="founder-cta-line">START YOUR JOURNEY WITH ACHIVEST.</div>
+      <a class="btn" href="#contact" style="margin-top:18px">Connect With Us</a>
     </div>
   </div>
 </section>
@@ -346,10 +351,10 @@ footer p{font-size:11px;color:var(--muted);margin-top:7px}
       <p>Have questions about our educational programs? Contact us.</p>
     </div>
     <div class="contact-grid">
-      <a class="contact-item" href="tel:+918788094676"><small>PHONE</small><strong>+91 87880 94676</strong></a>
-      <a class="contact-item" target="_blank" rel="noopener" href="https://wa.me/918788094676"><small>WHATSAPP</small><strong>Chat With Us</strong></a>
-      <a class="contact-item" href="mailto:hello.achivest@gmail.com"><small>BUSINESS EMAIL</small><strong>hello.achivest@gmail.com</strong></a>
-      <a class="contact-item" target="_blank" rel="noopener" href="https://www.instagram.com/achivest.fx/"><small>INSTAGRAM</small><strong>@achivest.fx</strong></a>
+      <a class="contact-item" href="tel:+918788094676"><span class="contact-icon" aria-hidden="true">☎</span><small>PHONE</small><strong>+91 87880 94676</strong></a>
+      <a class="contact-item" target="_blank" rel="noopener" href="https://wa.me/918788094676"><span class="contact-icon" aria-hidden="true">◉</span><small>WHATSAPP</small><strong>Chat With Us</strong></a>
+      <a class="contact-item" href="mailto:hello.achivest@gmail.com"><span class="contact-icon" aria-hidden="true">✉</span><small>BUSINESS EMAIL</small><strong>hello.achivest@gmail.com</strong></a>
+      <a class="contact-item" target="_blank" rel="noopener" href="https://www.instagram.com/achivest.fx/"><span class="contact-icon" aria-hidden="true">◎</span><small>INSTAGRAM</small><strong>@achivest.fx</strong></a>
     </div>
     <div style="text-align:center;margin-top:28px">
       <a class="btn" target="_blank" rel="noopener" href="https://wa.me/918788094676?text=Hello%20ACHIVEST%2C%20I%20have%20a%20course%20enquiry.">Contact on WhatsApp</a>
